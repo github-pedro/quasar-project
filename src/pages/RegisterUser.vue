@@ -33,8 +33,8 @@
                 :rules="[$rules.obrigatorio]"
               />
               <div>
-                <q-btn outline color="primary" label="Registrar" type="submit" />
-                <q-btn label="Limpar" type="reset" color="primary" flat class="q-ml-sm" />
+                <q-btn outline color="primary" :label="$t('button.registrar')" type="submit" />
+                <q-btn :label="$t('button.limpar')" type="reset" color="primary" flat class="q-ml-sm" />
               </div>
             </q-card-section>
         </q-card>

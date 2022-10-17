@@ -7,9 +7,18 @@ export default {
     digitesenha: 'Digite a sua senha',
     digitenome: 'Digite o seu nome'
   },
+  button: {
+    entrar: 'Entrar',
+    limpar: 'Limpar',
+    registrar: 'Registrar'
+  },
   registro: {
     confirmeemail: 'Confirmação de Email',
     textconfirm: 'Por favor confirme o seu email para finalizar o registro.'
+  },
+  dialog: {
+    confirme: 'Confirme',
+    logout: 'Deseja sair do sistema?'
   },
   rules: {
     campoobrigatorio: 'Campo obrigatório!',

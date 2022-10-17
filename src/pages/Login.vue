@@ -18,20 +18,20 @@
                 style="margin-bottom: 40px"
                 outlined
                 v-model="form.password"
-                label="Senha *"
-                hint="Digite o seu senha"
+                :label="$t('label.senha')"
+                :hint="$t('label.digitesenha')"
                 lazy-rules
                 :rules="[$rules.obrigatorio]"
               />
               <div>
-                <q-btn outline color="primary" label="Entrar" type="submit" />
-                <q-btn label="Limpar" type="reset" color="primary" flat class="q-ml-sm" />
+                <q-btn outline color="primary" :label="$t('button.entrar')" type="submit" />
+                <q-btn :label="$t('button.limpar')" type="reset" color="primary" flat class="q-ml-sm" />
               </div>
             </q-card-section>
         </q-card>
         <div class="full-width q-gutter-y-sm">
           <q-btn
-            label="Register"
+            :label="$t('button.registrar')"
             class="full-width text-white"
             flat
             to="/register"

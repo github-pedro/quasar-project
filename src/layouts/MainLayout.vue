@@ -6,8 +6,8 @@
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-
-        <div>Ambiente em desenvolvimento</div>
+        <div v-show="!logado">Ambiente em Desenvolvimento</div>
+        <div v-show="logado"> <q-icon name="person" size="1.3em" class="q-mr-sm" />{{user.email}}</div>
         <q-btn v-show="logado" icon="logout" class="q-ml-md" @click="dialog()"/>
       </q-toolbar>
     </q-header>
@@ -32,13 +32,16 @@ export default {
   computed: {
     logado(){
       return useAuthUser().isLoggedIn()
+    },
+    user(){
+      return useAuthUser().user.value
     }
   },
   methods: {
      dialog() {
       Dialog.create({
-        title: 'Confirme',
-        message: 'Deseja sair do sistema?',
+        title: this.$t('dialog.confirme'),
+        message: this.$t('dialog.logout'),
         cancel: true,
         persistent: true
       }).onOk(async() => {
