@@ -8,7 +8,7 @@
         </q-toolbar-title>
 
         <div>Ambiente em desenvolvimento</div>
-        <q-btn v-show="user" icon="logout" class="q-ml-md" @click="logout"/>
+        <q-btn v-show="logado" icon="logout" class="q-ml-md" @click="logout"/>
       </q-toolbar>
     </q-header>
 
@@ -30,9 +30,10 @@ export default {
       user: false,
     }
   },
-  mounted(){
-    const { isLoggedIn } = useAuthUser()
-    console.log(isLoggedIn)
+  computed: {
+    logado(){
+      return useAuthUser().isLoggedIn()
+    }
   },
   methods: {
     async logout () {
