@@ -8,7 +8,7 @@
         </q-toolbar-title>
 
         <div>Ambiente em desenvolvimento</div>
-        <q-btn v-show="logado" icon="logout" class="q-ml-md" @click="logout"/>
+        <q-btn v-show="logado" icon="logout" class="q-ml-md" @click="dialog()"/>
       </q-toolbar>
     </q-header>
 
@@ -22,13 +22,12 @@
 <script>
 
 import useAuthUser from 'app/src/composables/UseAuthUser'
+import { Dialog } from 'quasar'
 
 export default {
   name: 'MainLayout',
   data() {
-    return {
-      user: false,
-    }
+    return {}
   },
   computed: {
     logado(){
@@ -36,6 +35,16 @@ export default {
     }
   },
   methods: {
+     dialog() {
+      Dialog.create({
+        title: 'Confirme',
+        message: 'Deseja sair do sistema?',
+        cancel: true,
+        persistent: true
+      }).onOk(async() => {
+        this.logout()
+      })
+    },
     async logout () {
       const { logout } = useAuthUser()
       try {
