@@ -10,7 +10,8 @@ export default {
   button: {
     entrar: 'Entrar',
     limpar: 'Limpar',
-    registrar: 'Registrar'
+    registrar: 'Registrar',
+    resetsenha: 'Esqueceu a senha?'
   },
   registro: {
     confirmeemail: 'Confirmação de Email',

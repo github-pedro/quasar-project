@@ -38,7 +38,7 @@
             size="sm"
           />
           <q-btn
-            label="Forgot Password ?"
+            :label="$t('button.resetsenha')"
             class="full-width text-white"
             flat
             :to="{ name: 'forgot-password'}"

@@ -3,13 +3,14 @@
     clickable
     tag="a"
     target="_blank"
-    :href="link"
+
+    @click="$router.push(link)"
   >
     <q-item-section
       v-if="icon"
       avatar
     >
-      <q-icon :name="icon" />
+      <q-icon :name="icon" color="primary"/>
     </q-item-section>
 
     <q-item-section>
