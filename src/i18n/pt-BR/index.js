@@ -5,21 +5,43 @@ export default {
     nome: 'Nome',
     digiteemail: 'Digite o seu email',
     digitesenha: 'Digite a sua senha',
-    digitenome: 'Digite o seu nome'
+    digitenome: 'Digite o seu nome',
+    digiteprimeironome: 'Digite o primeiro nome',
+    digitesobrenome: 'Digite o sobrenome',
+    digiteendereco: 'Digite o endereço',
+    digitecidade: 'Digite a cidade',
+    filtrar: 'Filtrar',
+    primeironome: 'Primeiro Nome',
+    sobrenome: 'Sobrenome',
+    endereco: 'Endereço',
+    cidade: 'Cidade',
+    bemvindo: 'BEM VINDO AO PROJETO QUASAR'
   },
   button: {
     entrar: 'Entrar',
+    voltar: 'Voltar',
     limpar: 'Limpar',
     registrar: 'Registrar',
-    resetsenha: 'Esqueceu a senha?'
+    resetsenha: 'Esqueceu a senha?',
+    cadastropessoa: 'Cadastrar Pessoa',
+    cadastrar: 'Cadastrar',
+    editar: 'Editar',
+    deletar: 'Deletar'
   },
   registro: {
     confirmeemail: 'Confirmação de Email',
-    textconfirm: 'Por favor confirme o seu email para finalizar o registro.'
+    textconfirm: 'Por favor confirme o seu email para finalizar o registro.',
+    registro: 'Registro',
   },
   dialog: {
     confirme: 'Confirme',
-    logout: 'Deseja sair do sistema?'
+    atencao: 'ATENÇÃO!',
+    error: 'ERROR!',
+    sucesso: 'SUCESSO!',
+    cadastrosucesso: 'Cadastro realizado com SUCESSO!',
+    logout: 'Deseja sair do sistema?',
+    deletar: 'Deseja deletar esse cadastro?',
+    cadastro: 'Deseja realizar o cadastro?'
   },
   rules: {
     campoobrigatorio: 'Campo obrigatório!',

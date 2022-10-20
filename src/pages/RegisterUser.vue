@@ -1,7 +1,7 @@
 <template>
-  <q-page padding class="background">
-    <q-form class="row justify-center" @submit.prevent="register">
-      <p class="col-12 text-h5 text-center q-mt-xl text-white text-bold"> Registro </p>
+  <q-page padding>
+    <q-form class="row justify-center" @submit.prevent="register" @reset="reset">
+      <p class="col-12 text-h5 text-center q-mt-xl text-white text-bold"> {{$t('registro.registro')}} </p>
       <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
         <q-card>
             <q-card-section style="padding: 40px">
@@ -32,10 +32,12 @@
                 lazy-rules
                 :rules="[$rules.obrigatorio]"
               />
-              <div>
+              <q-card-actions>
                 <q-btn outline color="primary" :label="$t('button.registrar')" type="submit" />
                 <q-btn :label="$t('button.limpar')" type="reset" color="primary" flat class="q-ml-sm" />
-              </div>
+                <q-space/>
+                <q-btn :label="$t('button.voltar')" color="primary" to="/login" flat class="q-ml-sm" />
+              </q-card-actions>
             </q-card-section>
         </q-card>
       </div>
@@ -80,13 +82,15 @@ export default {
       try {
         await register(this.form)
         this.dialogConfirm = true
-        /*
-        this.route.push({
-          name: 'email-confirmation',
-          query: {email: this.form.email}
-        })*/
       } catch (error) {
 
+      }
+    },
+    reset(){
+      this.form = {
+        name: null,
+        email: null,
+        password: null
       }
     }
   }

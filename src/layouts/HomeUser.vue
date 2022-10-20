@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="background">
     <q-header elevated>
       <q-toolbar color="red">
         <q-btn
@@ -12,7 +12,7 @@
           @click="toggleLeftDrawer"
         />
         <q-toolbar-title>
-          Quasar App
+          Projeto Quasar
         </q-toolbar-title>
         <div v-show="!logado">Ambiente em Desenvolvimento</div>
         <div v-if="logado"> <q-icon name="person" size="1.3em" class="q-mr-sm" />{{user.email}}</div>
@@ -66,14 +66,13 @@ export default {
           title: 'Home',
           caption: '',
           icon: 'home',
-          routeName: 'me',
           link: '/home'
         },
         {
           title: 'Cadastro',
           caption: '',
           icon: 'how_to_reg',
-          routeName: '/cadastro'
+          link: '/pesquisar-pessoa'
         }
       ]
     }

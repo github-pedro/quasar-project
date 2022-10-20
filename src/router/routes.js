@@ -14,7 +14,10 @@ const routes = [
     component: () => import('layouts/HomeUser.vue'),
     children: [
       { path: '', component: () => import('pages/HomeLogado.vue') },
-      { path: '/home', name: 'home', component: () => import('pages/HomeLogado.vue') }
+      { path: '/home', name: 'home', component: () => import('pages/HomeLogado.vue') },
+      { path: '/incluir-pessoa', name: 'incluirpessoa', component: () => import('pages/Cadastro/Pessoa/IncluirPessoa.vue') },
+      { path: '/pesquisar-pessoa', name: 'pesquisarpessoa', component: () => import('pages/Cadastro/Pessoa/PesquisarPessoa.vue') },
+      { path: '/editar-pessoa/:id', name: 'editarpessoa', component: () => import('pages/Cadastro/Pessoa/IncluirPessoa.vue') }
     ],
     meta: {
       requiresAuth: true

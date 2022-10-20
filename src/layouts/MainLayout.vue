@@ -1,10 +1,10 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="background">
     <q-header elevated>
       <q-toolbar >
 
         <q-toolbar-title>
-          Quasar App
+          Projeto Quasar
         </q-toolbar-title>
         <div >Ambiente em Desenvolvimento</div>
       </q-toolbar>

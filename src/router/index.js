@@ -41,7 +41,6 @@ export default route(function (/* { store, ssrContext } */) {
       !isLoggedIn() &&
       to.meta.requiresAuth
     ) {
-      console.log('aqui')
       return { name: 'login' }
     }
   })

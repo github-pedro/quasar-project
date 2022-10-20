@@ -1,7 +1,7 @@
 <template>
-  <q-page padding class="background">
+  <q-page padding >
     <q-form class="row justify-center" @submit.prevent="onSubmit">
-      <p class="col-12 text-h5 text-center q-mt-xl text-white text-bold"> BEM VINDO </p>
+      <p class="col-12 text-h5 text-center q-mt-xl text-white text-bold"> {{$t('label.bemvindo')}} </p>
       <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
         <q-card>
             <q-card-section style="padding: 40px">
@@ -35,14 +35,7 @@
             class="full-width text-white"
             flat
             to="/register"
-            size="sm"
-          />
-          <q-btn
-            :label="$t('button.resetsenha')"
-            class="full-width text-white"
-            flat
-            :to="{ name: 'forgot-password'}"
-            size="sm"
+            size="md"
           />
         </div>
       </div>

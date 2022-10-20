@@ -1,11 +1,11 @@
 <template>
 <q-page padding>
-    <q-div class="row justify-center">
-      <p class="col-12 text-h5 text-center q-mt-xl text-primary text-bold"> VOCÊ ESTÁ LOGADO! </p>
-      <p class="col-12 text-h5 text-center q-mt-xl text-primary text-bold"> SEJA BEM VINDO </p>
-      <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
-      </div>
-    </q-div>
+    <div class="row justify-center">
+
+      <p class="col-12 text-h5 text-center q-mt-xl text-white text-bold"> SEJA BEM VINDO AO PROJETO QUASAR </p>
+      <img style="width: 100px" src="https://cdn.quasar.dev/logo-v2/svg/logo.svg"/>
+      <p class="col-12 text-h5 text-center q-mt-md text-white text-bold"> VOCÊ ESTÁ LOGADO! </p>
+    </div>
 </q-page>
 </template>
 
